@@ -56,21 +56,8 @@ body {
 	width: 50%;
 }
 
-.column {
-    float: left;
-    width: 50%;
-    height: 70%;
-    padding: 5px;
-    text-align: center;
-}
-
 .main h1 {
 	text-align: center;
-}
-
-.column a {
-    text-decoration: none;
-    color: #B7D8FC;
 }
 
 .footer {
