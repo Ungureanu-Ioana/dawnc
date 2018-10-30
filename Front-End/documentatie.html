@@ -1,79 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-  	<meta charset='UTF-8'/>
-	<title>Documentatie</title>
-	<link rel='stylesheet' href='documentatie.css'/>
+  <meta charset='UTF-8'/>
+  <title>Documentatie</title>
+  <link rel='stylesheet' href='documentatie.css'/>
+
 </head>
 <body>
-	<article>
-		<h1 aria-level="12">Jigsaw Puzzle</h1>
-		<div id="contentinfo">
-			<section typeof="sa:AuthorsList" id="authors">
-				<h4>Authors:</h4>
-				<ul>
-					<li typeof="sa:ContributorRole" property="schema:author">
-						<span typeof="schema:Person">
-        					<span property="schema:name">Ungureanu Cezara Ioana</span>
-						</span>
-						<ul>
-        					<li property="schema:roleContactPoint" typeof="schema:ContactPoint">
-          						<a href="mailto:cezara.ungureanu@info.uaic.ro" property="schema:email">cezara.ungureanu@info.uaic.ro</a>
-        					</li>
-      					</ul>
-					</li>
-					<li typeof="sa:ContributorRole" property="schema:author">
-						<span typeof="schema:Person">
-        					<span property="schema:name">Adam Alexandru</span>
-						</span>
-						<ul>
-        					<li property="schema:roleContactPoint" typeof="schema:ContactPoint">
-          						<a href="mailto:alexandru.adam@info.uaic.ro" property="schema:email">alexandru.adam@info.uaic.ro</a>
-        					</li>
-      					</ul>
-					</li>
-					<li typeof="sa:ContributorRole" property="schema:author">
-						<span typeof="schema:Person">
-        					<span property="schema:name">Stefanovici Andreea</span>
-						</span>
-						<ul>
-        					<li property="schema:roleContactPoint" typeof="schema:ContactPoint">
-          						<a href="mailto:andreea.stefanovici@info.uaic.ro" property="schema:email">andreea.stefanovici@info.uaic.ro</a>
-        					</li>
-      					</ul>
-      				</li>
-				</ul>
-			</section>
-			<section>
-				<h6>Content:</h6>
-				<ol>
-					<li>Project description</li>
-					<li>Used technologies</li>
-					<li>Site structure</li>
-				</ol>
-			</section>
-			<section>
-				<h6>Project description:</h6>
-				<p>Să se conceapă o aplicaţie Web – eventual, disponibilă ca extensie de navigator Web – care să permită rezolvarea de puzzle-uri propuse de program sau definite de utilizatori. Fiecare jucător va putea selecta – local ori de la distanţă via un URL – o imagine (în formatele PNG şi JPEG) care va fi decupată la momentul rulării în fragmente cât mai complicate folosind reguli bazate, de pildă, pe gramatici generative (divizările rectangulare sunt interzise). Piesele vor fi amestecate, mutările/rotirile putând fi efectuate via operaţii drag & drop. Odată ce un fragment e mutat în poziţia (aproape) corectă şi în unghiul (aproape) corect, aplicaţia va oferi suport pentru plasarea exactă (snap) în zona potrivită. Starea curentă a fiecărui puzzle va putea fi salvată local, cu posibilitatea restaurării ulterioare. Bonus: abordare colaborativă în timp real a rezolvării de puzzle-uri.</p>
-			</section>
-			<section>
-				<h6>Used technologies:</h6>
-			</section>
-			<section>
-				<h6>Site structure:</h6>
-				<h3>First page</h3>
-				<figure typeof="sa:image">
-					<img src="images/firstpage.png">
-				</figure>
-				<p>Where you can choose what picture you want to make a puzzle of.</p>
 
-				<h3>Gallery page</h3>
-				<figure typeof="sa:image">
-					<img src="images/gallery.png">
-				</figure>
-				<p>The pictures from which you can choose.</p>
-			</section>
-		</div>
-	</article>
+  <header>
+    <nav>
+    <br>
+    <h1 align="left">Jigsaw</h1>
+    <br>
+    <h3 align="left">The Jigsaw Puzzle</h3>
+    <br>
+    <br>
+    </nav>
+  </header>
+
+  <br>
+  <section>
+  <h1><center><span style="text-decoration: underline;"><font color="goldenrod">Jigsaw</font></span></center></h1>
+  <br>
+  <p>Proiect realizat de:</p>
+  <sub><p><span style="text-decoration: underline;"><font color="#990033">Andreea Ștefanovici</font></span></p></sub>
+  <sub><p><span style="text-decoration: underline;"><font color="#990033">Ioana Ungureanu</font></span></p></sub>
+  <sub><p><span style="text-decoration: underline;"><font color="#990033">Alexandru Adam</font></span></p></sub>
+</section>
+<br>
+<br>
+
+    <fieldset>
+    <p><b><span style="text-decoration: underline;">Abstract</span></b></p>
+    <br>
+    <br>
+    <p>Lucrarea prezintă funcționalitătile principale ale aplicației web Jigsaw, clasicul joc de puzzle. Acesta constă în reconstituirea unei imagini 
+	 având la dispoziție numeroase piese (diferite ca formă și culoare) ce se pot intercala. 
+	</p>
+    
+    <br>
+    <br>
+
+ <section>
+
+                <center>          
+            <br>
+            <nav>
+            <br>
+            <h3><font color="goldenrod">Cuprins:</font></h3>
+            <br>
+                <a href="#descriere">1.Descrierea proiectului</a><br>
+                <a href="#tehnologii">2.Tehnologii folosite</a><br>
+                <a href="#structsite">3.Structura site-ului</a><br>
+                <a href="#bibliografie">4.Bibliografie</a><br>
+                <br>
+            </center>
+        </section>
+    </fieldset>
+
+
+
+
+    <fieldset>
+    <section>
+
+                <center>          
+            <br>
+            <nav>
+            <br>
+            <h3><a id="descriere"><font color="goldenrod">1.Descrierea proiectului</font></a></h3>
+            <br>
+               
+            </center>
+        </section>
+    <br>
+    
+    <br>
+    <p>Să se conceapă o aplicaţie Web – eventual, disponibilă ca extensie de navigator Web – care să permită rezolvarea de puzzle-uri propuse de program 
+	sau definite de utilizatori. Fiecare jucător va putea selecta – local ori de la distanţă via un URL – o imagine (în formatele PNG şi JPEG) care va fi 
+	decupată la momentul rulării în fragmente cât mai complicate folosind reguli bazate, de pildă, pe gramatici generative (divizările rectangulare sunt interzise). 
+	Piesele vor fi amestecate, mutările/rotirile putând fi efectuate via operaţii drag & drop. Odată ce un fragment e mutat în poziţia (aproape) corectă şi în unghiul 
+	(aproape) corect, aplicaţia va oferi suport pentru plasarea exactă (snap) în zona potrivită. Starea curentă a fiecărui puzzle va putea fi salvată local, 
+	cu posibilitatea restaurării ulterioare. Bonus: abordare colaborativă în timp real a rezolvării de puzzle-uri.
+	</p>
+    <br>
+    <br>
+
+ <section>
+
+              <section>
+
+                <center>          
+            <br>
+            <nav>
+            <br>
+            <h3><a id="tehnologii"><font color="goldenrod">2.Tehnologii folosite:</font></a></h3>
+            <br>
+            </nav>
+               
+            </center>
+        </section>
+    </fieldset>
+
+    <fieldset>
+    <br>
+    <br>
+
+    <center>
+    <p>
+    În implementarea proiectului, se vor folosi numeroase tehnologii actuale, cu ajutorul cărora vom integra componentele aplicației:</p>
+
+<p>HTML/CSS: HTML (HyperText Markup Language) este unul din primele elemente fundamentale ale WWW (World Wide Web) ce descrie formatul primar în care documentele sunt distribuite şi 
+văzute pe Web.
+<br>
+<br>
+</p>
+</center>
+    
+    <br>
+    <br>
+
+
+              <section>
+
+                <center>          
+            <br>
+            <nav>
+            <br>
+            <h3><a id="structsite"><font color="goldenrod">3.Structura site-ului:</font></a></h3>
+            <br>
+            </nav>
+               
+            </center>
+        </section>
+    </fieldset>
+
+
+    <fieldset>
+    <br>
+    <br>
+<p><b><span style="text-decoration: underline;">1.First Page</span></b></p>
+<img src="images/firstPage.png" alt="First Page" style="width:650px;height:500px;" border="5">
+<br>
+<p align="center">Această pagină este cea care îl întâmpină pe utilizator la prima accesare a aplicației. Aici putem introduce, dupa preferinta, un link catre o imagine
+sau putem alege din calculatorul propriu ori din colectia prezenta in aplicatie.</p>
+<br>
+<p><b><span style="text-decoration: underline;">2.Gallery</span></b></p>
+<img src="images/gallery.png" alt="Gallery" style="width:650px;height:500px;" border="5">
+<br>
+<p align="center">
+<p>Aceasta pagina reprezinta selectia de imagini din care utilizatorul poate alege. Ea poate fi accesata prin apasarea butonului "Choose".
+
+</p>
+<br>
+<p><b><span style="text-decoration: underline;">3.Upload a photo</span></b></p>
+<img src="images/upload.png" alt="Upload" style="width:650px;height:500px;" border="5">
+<br>
+<p align="center">
+<p>
+Aceasta pagina prezinta imaginea incarcata de utilizator si impartita in mai multe piese ce trebuie asamblate sub forma imaginii initiale.
+    
+</p>
+<br>
+<p><b><span style="text-decoration: underline;">4.Difficulty</span></b></p>
+<img src="images/difficulty.png" alt="contact" style="width:650px;height:500px;" border="5">
+<br>
+<p align="center">
+<p>
+Cu ajutorul acestui meniu, utilizatorul poate selecta nivelul de dificultate dorit. In functie de nivel, imaginea va fi impartita intr-un numar mai mare sau mai mic de piese.
+</p>
+<br>
+
+
+              <section>
+
+                <center>          
+            <br>
+            <nav>
+            <br>
+            <h3><font color="goldenrod"><a id="bibliografie">5.Bibliografie:</a></font></h3>
+            <br>
+            </nav>
+            <br>
+            <section><p align="left"><font color="goldenrod">
+            <li><a href="https://developer.mozilla.org/bm/docs/Web/JavaScript">https://developer.mozilla.org/bm/docs/Web/JavaScript</a></li>
+            <li><a href="https://www.codecademy.com/">https://www.codecademy.com/</a></li>
+            <li><a href="https://stackoverflow.com/">https://stackoverflow.com/</a></li>
+            <li><a href="http://forum.codecall.net/">http://forum.codecall.net/</a></li>
+            <li><a href="http://www.phpclasses.org/">http://www.phpclasses.org/</a></li>
+            </p>
+        </section>
+    </article>
+
+               
+            </center>
+        </section>
+</fieldset>
+<br>
+<br>
+
+
+<p><sub>© 2018 TW.com | All rights reserved.</sub></p>
+
+  
+
+
+
 </body>
 </html>
