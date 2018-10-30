@@ -1,0 +1,92 @@
+body {
+    background-image: url('images/background.png');
+    background-size: cover;
+    color: #F4F8FF;
+}
+
+.header {
+    border-bottom: 2px solid #F4F8FF;
+}
+
+.title { 
+	grid-area: header;
+	color: white;	
+	font-size: 30px;
+    margin-bottom: 0%;
+	text-align: center;
+}
+.difficulty {
+	grid-area: menu;
+	padding: 132px 0;
+	font-size: 25px;	
+}
+.photo { grid-area: main; }
+.photo img{
+	margin-top: 10px;
+	width: 400px;
+	opacity: 0.5;
+	border: 10px solid;
+	border-color: black;
+}
+.photo .container{
+	background-color: white;
+    margin-left: 290px;
+    margin-right: 290px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.pieces{ 
+	grid-area: right;
+	text-align: center;
+	font-size: 30px;
+}
+.footer {
+	grid-area: footer;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+	font-size:20px;
+}
+.pieces .container{
+	background-color:white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header'
+    'menu main main main right'
+    'footer footer footer footer footer';
+  grid-gap: 10px;
+  background-color: none;
+  padding: 10px;
+}
+.grid-container > div {
+  background-color: none;
+  text-align: center;
+  
+  
+}
+
+.vertical-menu {
+    width: 200px;
+	padding-left: 65px;
+}
+
+.vertical-menu a {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #003380;
+    color: white;
+}
