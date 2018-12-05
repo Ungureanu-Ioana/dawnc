@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset='UTF-8'/>
+	<title>Documentatie</title>
+	<link rel='stylesheet' href='documentatie.css'/>
+</head>
+<body>
+	<article>
+		<h1 aria-level="12">Jigsaw Puzzle</h1>
+		<div id="contentinfo">
+			<section typeof="sa:AuthorsList" id="authors">
+				<h4>Authors:</h4>
+				<ul>
+					<li typeof="sa:ContributorRole" property="schema:author">
+						<span typeof="schema:Person">
+        					<span property="schema:name">Ungureanu Cezara Ioana</span>
+						</span>
+						<ul>
+        					<li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+          						<a href="mailto:cezara.ungureanu@info.uaic.ro" property="schema:email">cezara.ungureanu@info.uaic.ro</a>
+        					</li>
+      					</ul>
+					</li>
+					<li typeof="sa:ContributorRole" property="schema:author">
+						<span typeof="schema:Person">
+        					<span property="schema:name">Adam Alexandru</span>
+						</span>
+						<ul>
+        					<li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+          						<a href="mailto:alexandru.adam@info.uaic.ro" property="schema:email">alexandru.adam@info.uaic.ro</a>
+        					</li>
+      					</ul>
+					</li>
+					<li typeof="sa:ContributorRole" property="schema:author">
+						<span typeof="schema:Person">
+        					<span property="schema:name">Stefanovici Andreea</span>
+						</span>
+						<ul>
+        					<li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+          						<a href="mailto:andreea.stefanovici@info.uaic.ro" property="schema:email">andreea.stefanovici@info.uaic.ro</a>
+        					</li>
+      					</ul>
+      				</li>
+				</ul>
+			</section>
+			<section>
+				<h6>Content:</h6>
+				<ol>
+					<li>Project description</li>
+					<li>Intermediate stages</li>
+					<li>Data modeling</li>
+					<li>Data storage</li>
+				</ol>
+			</section>
+			<section>
+				<h6>Project description:</h6>
+				<p>JIGR is a Web application that allows the user to solve puzzles proposed by the user or the program. Each player will be able to select - locally or through an URL - an image (PNG or JPEG format) which will be decupated at run time in complex fragments. The cutting of the fragments will be decided by some base rules like generative grammars (rectangular divisions are forbidden). The pieces will be mixed, the moves/rotations will be available through drag & drop. Once a fragment is moved close to the right position and close to the right angle, the application will offer support for the exact placing of the fragment (snap) in the right zone. The current state of the puzzle will be available for local saving, with the possibility for an eventual restauration.</p>
+			</section>
+			<section>
+				<h6>Intermediate stages:</h6>
+				<h4>Information Gathering:</h4>
+				<p style="text-align: left;">After a short research we combined our ideas in a brain storming session and picked up the best information that we came up regarding our project. We also looked on websites that implement the same concept to get an idea on what we should have in the end.</p>
+				<h4>Planning:</h4>
+				<p>After we gathered all the information that we needed, we came up with a plan for our project. The plan was designed considering important aspects of UX(user experience) and UI(user interface) like the responsivity of our website and the easy understandable game.</p>
+				<figure typeof="sa:image">
+					<img src="planning.jpg">
+				</figure>
+				<h4>Design:</h4>
+				<p>For designing our website we considered elements of design like the type of fonts used on the platform and amount of text was reduced to improve UX.</p>
+				<figure typeof="sa:image">
+					<img src="homePage.jpg">
+				</figure>
+				<h4>Development:</h4>
+				<p>In the development stage we will take all of the individual graphic elements from the prototype and use them to create the actual, functional site. After we finished the development we wil validate the code.</p>
+			</section>
+			<section>
+				<h6>Data modeling:</h6>
+				<p>Using the MySql database management system we'll create a table which will include all the images the user can choose from. Also, we apply the schema microdata (itemscope & itemprop) on our content to make it easier for search engines to identify that this content relates to a game, as defined by the schema.org type hierarchy.</p>
+				<figure typeof="sa:image">
+					<img src="microdata.jpg">
+				</figure>
+			</section>
+			<section>
+				<h6>Data storage:</h6>
+				<p>The current state of the puzzle has to be available for local saving, with the posibility of an eventual restauration. To be able to do this we'll have to use <b>localStorage</b>, a type of web storage that allows us to store and access data right in the browser with no expiration date. This means the data stored in the browser will persist even after the browser window has been closed. The idea here is to be able to take the state in which the puzzle and store it into localStorage. It only supports strings, so we need to turn the image into a Data URL, so we'll load it into a canvas element.</p>
+				<figure typeof="sa:image">
+					<img src="localStorage.jpg">
+				</figure>
+				<p>This is only an example of the image being saved, we'll also have to save the state in which the puzzle is: which was the difficulty and the number of pieces selected and how many pieces where already placed in the right way.</p>
+			</section>
+		</div>
+	</article>
+</body>
+</html>
