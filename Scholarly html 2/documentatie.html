@@ -38,7 +38,7 @@
 						</span>
 						<ul>
         					<li property="schema:roleContactPoint" typeof="schema:ContactPoint">
-          						<a href="mailto:andreea.stefanovici@info.uaic.ro" property="schema:email">andreea.stefanovici@info.uaic.ro</a>
+          						<a href="mailto:diana.stefanovici@info.uaic.ro" property="schema:email">diana.stefanovici@info.uaic.ro</a>
         					</li>
       					</ul>
       				</li>
@@ -48,14 +48,63 @@
 				<h6>Content:</h6>
 				<ol>
 					<li>Project description</li>
+					<li>The User</li>
+					<li>Principal modules</li>
+					<li>Implementation details</li>
+					<li>Use cases</li>
 					<li>Intermediate stages</li>
 					<li>Data modeling</li>
 					<li>Data storage</li>
+					<li>Bibliography</li>
 				</ol>
 			</section>
 			<section>
 				<h6>Project description:</h6>
 				<p>JIGR is a Web application that allows the user to solve puzzles proposed by the user or the program. Each player will be able to select - locally or through an URL - an image (PNG or JPEG format) which will be decupated at run time in complex fragments. The cutting of the fragments will be decided by some base rules like generative grammars (rectangular divisions are forbidden). The pieces will be mixed, the moves/rotations will be available through drag & drop. Once a fragment is moved close to the right position and close to the right angle, the application will offer support for the exact placing of the fragment (snap) in the right zone. The current state of the puzzle will be available for local saving, with the possibility for an eventual restauration.</p>
+			</section>
+			<section>
+				<h6>The User:</h6>
+				<p>The user has complete acces to the website. He can do any operation of the followings: adding an image with PNG or JPEG format from his own device (Make a puzzle) and fragmentate the image in pieces so he can solve the puzzle. The amount of pieces depens on the difficulty level: Easy, Medium, Hard. If he doesn't want to upload, he can choose one from our gallery (Choose). The pieces can be rotated and the progress will be saved locally, should he choose to exit the game.
+				</p>
+			</section>
+			<section>
+				<h6>Principal modules:</h6>
+				<p>The website has the following pages:</p>
+					<ul>
+						<li>Home Page: 
+							Represents the landing page, the first page that the user sees. He can choose an image from the choose option or from the gallery.
+						</li>
+						<li>Gallery Page: 
+							Represents the page which holds the images available for the user to choose from. This page can be accessed after pressing the Choose button in the Home page.
+						</li>
+						<li>Upload Page:
+							This is the page which will hold the game, accessed after picking an image. Here we can find to the left of the game the menu from which we can choose the difficulty level and to the right is the space reserved for the pieces of the puzzle.
+						</li>
+					</ul>
+				<figure typeof="sa:image">
+					<img alt="schema" src="schema.jpg">
+				</figure>
+				<figure typeof="sa:image">
+					<img alt="schema2" src="schema2.jpg">
+				</figure>
+			</section>
+			<section>
+				<h6>Implementation details:</h6>
+				<p>For our appplication we decided to use a database through MySql which will hold the table in which the images will be stored and Node.js 	for making the connection between the website and the database. 
+					Browser-ul: The element which will help us comunicate with the user. We used CSS and HTML v.5 for the representation of the pages. 
+					Node.JS: Is a open-source server platform which allows you to run Javascript on server.
+					SGBD: MySql is the database management service that we'll use.
+				</p>
+				<figure typeof="sa:image">
+					<img alt="classes" src="classses.jpg">
+				</figure>
+			</section>
+			<section>
+				<h6>Use cases:</h6>
+				<ul>
+					<li>The user uploads an image with an unsupported extension: If the user tries this then an alert will appear on the screen.</li>
+					<li>The file uploaded by the user is too big: If the user tries this then an alert will appear on the screen.</li>
+				</ul>
 			</section>
 			<section>
 				<h6>Intermediate stages:</h6>
@@ -64,30 +113,40 @@
 				<h4>Planning:</h4>
 				<p>After we gathered all the information that we needed, we came up with a plan for our project. The plan was designed considering important aspects of UX(user experience) and UI(user interface) like the responsivity of our website and the easy understandable game.</p>
 				<figure typeof="sa:image">
-					<img src="planning.jpg">
+					<img alt="planning" src="planning.jpg">
 				</figure>
 				<h4>Design:</h4>
 				<p>For designing our website we considered elements of design like the type of fonts used on the platform and amount of text was reduced to improve UX.</p>
 				<figure typeof="sa:image">
-					<img src="homePage.jpg">
+					<img alt="homePage" src="homePage.jpg">
 				</figure>
 				<h4>Development:</h4>
 				<p>In the development stage we will take all of the individual graphic elements from the prototype and use them to create the actual, functional site. After we finished the development we wil validate the code.</p>
 			</section>
 			<section>
 				<h6>Data modeling:</h6>
-				<p>Using the MySql database management system we'll create a table which will include all the images the user can choose from. Also, we apply the schema microdata (itemscope & itemprop) on our content to make it easier for search engines to identify that this content relates to a game, as defined by the schema.org type hierarchy.</p>
+				<p>Using the MySql database management system we'll create a table which will include all the paths of the images the user can choose from. Also, we apply the schema microdata (itemscope & itemprop) on our content to make it easier for search engines to identify that this content relates to a game, as defined by the schema.org type hierarchy.</p>
 				<figure typeof="sa:image">
-					<img src="microdata.jpg">
+					<img alt="microdata" src="microdata.jpg">
 				</figure>
 			</section>
 			<section>
 				<h6>Data storage:</h6>
 				<p>The current state of the puzzle has to be available for local saving, with the posibility of an eventual restauration. To be able to do this we'll have to use <b>localStorage</b>, a type of web storage that allows us to store and access data right in the browser with no expiration date. This means the data stored in the browser will persist even after the browser window has been closed. The idea here is to be able to take the state in which the puzzle and store it into localStorage. It only supports strings, so we need to turn the image into a Data URL, so we'll load it into a canvas element.</p>
 				<figure typeof="sa:image">
-					<img src="localStorage.jpg">
+					<img alt="localStorage" src="localStorage.jpg">
 				</figure>
 				<p>This is only an example of the image being saved, we'll also have to save the state in which the puzzle is: which was the difficulty and the number of pieces selected and how many pieces where already placed in the right way.</p>
+			</section>
+			<section>
+				<h6>Bibliography:</h6>
+					<ul>
+						<li>https://developer.mozilla.org/en-US/</li>
+						<li>http://www.rssboard.org/rss-specification</li>
+						<li>https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms</li>
+						<li>https://javascript.info/</li>
+						<li>https://www.tutorialspoint.com/javascript/</li>
+					</ul>
 			</section>
 		</div>
 	</article>
